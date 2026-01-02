@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: n8n-video-render
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars: []
+    plan: free
+    region: virginia
+    autoDeploy: true
+    aptPackages:
+      - ffmpeg
